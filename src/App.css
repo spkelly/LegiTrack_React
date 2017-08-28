@@ -1,0 +1,49 @@
+.jumbotron{
+  padding: 0;
+  border-radius: 0;
+  background: url('/img/pantheon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 612px;
+}
+
+.jb-title{
+  color: white;
+}
+
+.jb-sub{
+  color: white;
+}
+
+.jb-overlay{
+  padding-top: 64px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(156,143,140,0.6);
+}
+
+.promo{
+  padding-top: 70px;
+  padding-bottom: 40px;
+  min-height:320px;
+}
+
+.footer{
+
+}
+.search-component{
+  padding-top: 36px;
+}
+.search-bar{
+  display: inline-block;
+  width: 270px;
+}
+
+.search-button{
+  margin-left:20px;
+  width: 80px;
+  display: inline-block;
+}
