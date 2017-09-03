@@ -4,7 +4,6 @@ import Navigation from './navbar'
 import Jumbotron from './jumbotron'
 import Promo from './promo'
 import Footer from './footer'
-import Search from './search'
 class App extends Component {
   render() {
     return (
