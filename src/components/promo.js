@@ -8,19 +8,19 @@ class Promo extends Component{
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-sm-12 text-center">
-              <h3 class="flavor-title center">Discover</h3>
+              <h3 className="flavor-title center">Discover</h3>
               <hr />
-              <h5 class="center">Search any active Colorado legislation!</h5>
+              <h5 className="center">Search any active Colorado legislation!</h5>
             </div>
             <div className="col-md-4 col-sm-12 text-center">
-              <h3 class="flavor-title center">Track</h3>
+              <h3 className="flavor-title center">Track</h3>
               <hr />
-              <h5 class="center">View upcoming Events, votes, hearings and more!</h5>
+              <h5 className="center">View upcoming Events, votes, hearings and more!</h5>
             </div>
             <div className="col-md-4 col-sm-12 text-center">
-              <h3 class="flavor-title center">Research</h3>
+              <h3 className="flavor-title center">Research</h3>
               <hr />
-              <h5 class="center">Discover bill sponsors, currents statuses and complete bill texts</h5>
+              <h5 className="center">Discover bill sponsors, currents statuses and complete bill texts</h5>
             </div>
           </div>
         </div>
