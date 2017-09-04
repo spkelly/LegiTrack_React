@@ -4,7 +4,7 @@
   background: url('/img/pantheon.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 612px;
+  height: 540px;
   margin-bottom: 0px;
 }
 
@@ -36,11 +36,15 @@
 }
 
 .promo{
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 40px;
   min-height:352px;
-  background-color: #b0c5cf;
+  /*background-color: #b0c5cf;*/
 
+}
+
+.promo h4{
+  padding-bottom: 20px;
 }
 
 .footer{
@@ -90,4 +94,58 @@
   -webkit-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
   box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+.bill-card{
+  display: block;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.15);
+  border: 1px solid rgba(176,197,207,1);
+}
+
+.bill-card:hover{
+  webkit-transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1.09);
+  -ms-transition: all 200ms ease-in-out;
+  -ms-transform: scale(1.09);
+  -moz-transition: all 200ms ease-in-out;
+  -moz-transform: scale(1.09);
+  transition: all 200ms ease-in-out;
+  transform: scale(1.09);
+}
+
+.promo-title{
+
+}
+
+.bc-title{
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-bottom: 0px;
+}
+/*
+.bc-status{
+  margin-left: 10px;
+}*/
+
+.progress-bar{
+  height: 20px;
+  margin: 10px 0px;
+}
+
+.progress{
+  background-color: blue;
+  height: 100%;
+}
+
+.passed{
+  background-color: green;
+}
+.failed{
+  width: 100%;
+  background-color: red;
+}
+hr{
+  margin-top: 6px;
 }
