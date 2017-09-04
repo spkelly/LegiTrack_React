@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Search from './search'
+import Search from './search';
+
+const testDeec="Concerning the impact of federal tax reform on the state and an encouragement to the state's congressional delegation to pass reforms that make the federal tax system simple, easy to understand, and not prone to tax avoidance efforts.";
 
 class Jumbotron extends Component{
   render(){
@@ -8,7 +10,7 @@ class Jumbotron extends Component{
         <div className="jumbotron">
           <div className="jb-overlay">
             <div className="container">
-              <h1 className="jb-title display-4">Legitrack</h1>
+              <h1  className="jb-title display-4">Legitrack</h1>
               <p className=" jb-sub lead">The Thrill of legislature is at your finger tips</p>
               <Search></Search>
             </div>
