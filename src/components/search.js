@@ -47,7 +47,7 @@ class Search extends Component{
   }
 
   validateInput(){
-    if(this.state.inputValue.length == 0){
+    if(this.state.inputValue.length === 0){
       this.setState({isValid: false});
     }
     else{
