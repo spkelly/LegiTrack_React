@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import {Provider} from 'react-redux';
+import Results from './components/Results';
+ // eslint-disable-next-line
 import {Router, Route, IndexRoute} from 'react-router';
-import {createStore, applyMiddleware} from 'redux';
+ // eslint-disable-next-line
+import {createStore} from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 import createHistory from 'history/createBrowserHistory'
 
@@ -12,7 +14,10 @@ import createHistory from 'history/createBrowserHistory'
 let history = createHistory();
 ReactDOM.render(
   <Router history={history}>
-    <Route exact path="/" component={App} />
+    <div>
+      <Route exact path="/" component={App} />
+      <Route path="/results" component={Results} />
+    </div>
   </Router>
   ,document.getElementById('root')
 );

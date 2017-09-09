@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Search from './search';
 
-const testDeec="Concerning the impact of federal tax reform on the state and an encouragement to the state's congressional delegation to pass reforms that make the federal tax system simple, easy to understand, and not prone to tax avoidance efforts.";
 
 class Jumbotron extends Component{
   render(){
