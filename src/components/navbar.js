@@ -5,7 +5,7 @@ class Navigation extends Component{
   render(){
     return (
       <nav className="navbar nav">
-        <a className="navbar-brand">Legitrack</a>
+        <a href="/" className="navbar-brand">Legitrack</a>
       </nav>
     )
   }
