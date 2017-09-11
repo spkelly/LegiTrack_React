@@ -58,7 +58,7 @@ class Search extends Component{
   render(){
     return (
       <div className="search-component">
-        <form onSubmit={this.handleSubmit.bind(this)} actions="GET" path="./results">
+        <form onSubmit={this.handleSubmit.bind(this)}>
           <div className="row">
             <div className="col-lg-5 col-sm-12">
               <input type="text" value={this.state.inputValue}onChange={this.changeValue.bind(this)}className="form-control search-bar" />

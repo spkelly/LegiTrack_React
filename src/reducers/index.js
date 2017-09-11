@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import GifsReducer from './bills';
+import BillsReducer from './reducer_bills';
 
 const rootReducer = combineReducers({
-  bills: BillsReducer
+    bills: BillsReducer
 });
 
 export default rootReducer;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './navbar';
 import Footer from './footer';
-import ResultList from  './ResultList';
+import ResultList from  '../containers/ResultList';
 import testData from '../otherstuff/testData';
 import _ from 'lodash';
 
@@ -18,7 +18,7 @@ class Results extends Component{
       <div className="search-results">
         <Navigation />
         <div className="results-main">
-          <ResultList list={this.state.testData}></ResultList>
+          <ResultList></ResultList>
         </div>
         <Footer/>
       </div>

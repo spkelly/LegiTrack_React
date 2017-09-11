@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import ResultListItem from './resultListItem';
-import SearchPanel from './searchPanel';
+import ResultListItem from '../components/resultListItem';
+import SearchPanel from '../components/searchPanel';
 
 class ResultList extends Component{
   constructor(props){
@@ -44,4 +45,9 @@ class ResultList extends Component{
   }
 }
 
-export default ResultList
+function mapStateToProps(state){
+  return {
+    list: state.bills
+  }
+}
+export default connect(mapStateToProps)(ResultList);
