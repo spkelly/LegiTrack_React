@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BillCard from './billCard';
+import BillCard from '../components/billCard';
 
 const bill ={
   billName: "test",

@@ -14,7 +14,6 @@ import createHistory from 'history/createBrowserHistory'
 
 let history = createHistory();
 const createStoreWithMiddleware = applyMiddleware()(createStore);
-
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={history}>
