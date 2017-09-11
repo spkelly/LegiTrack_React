@@ -148,4 +148,38 @@
 }
 hr{
   margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+
+/* Search Results*/
+
+.results-main{
+  min-height: 964px;
+}
+
+.list-item-title{
+  color: grey;
+}
+
+.list-item-number{
+  color: #e9c893;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.bill-list-item{
+  margin: 0px;
+  padding-bottom: 26px;
+  border: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.search-col{
+  padding: 0px;
+}
+.search-panel{
+  height:50px;
+  border: black solid 1px;
+  padding: 0px;
 }
