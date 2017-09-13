@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
+import BillView from './billView';
 import ResultListItem from '../components/resultListItem';
 import SearchPanel from '../components/searchPanel';
 import {selectBill} from '../actions/index';
@@ -44,6 +45,7 @@ class ResultList extends Component{
             <div className="list-group">
               {this.renderResults()}
             </div>
+            <BillView />
           </div>
 
         </div>
