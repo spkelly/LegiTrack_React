@@ -4,19 +4,27 @@ import _ from 'lodash';
 
 import ResultListItem from '../components/resultListItem';
 import SearchPanel from '../components/searchPanel';
-
+import {selectBill} from '../actions/index';
+import {bindActionCreators} from 'redux';
 class ResultList extends Component{
   constructor(props){
     super(props);
 
     this.renderResults = this.renderResults.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-
+  handleClick(bill){
+    console.log("hello")
+    this.props.selectBill(bill);
+  }
   renderResults(){
     let resultList = _.map(this.props.list, (bill) =>{
       if(bill.bill_number){
         return (
-          <ResultListItem key={bill.bill_id} bill={bill} />
+          <div  key={bill.bill_id} onClick={()=>this.handleClick(bill)}>
+            <ResultListItem  bill={bill} />
+          </div>
+
         )
       }
     });
@@ -24,7 +32,7 @@ class ResultList extends Component{
   }
 
   render(){
-    console.log('this.props: ', this.props.list)
+    console.log('this.props: ', this.props)
     return (
       <div className="search-main">
         <div className="row">
@@ -50,4 +58,8 @@ function mapStateToProps(state){
     list: state.bills
   }
 }
-export default connect(mapStateToProps)(ResultList);
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({selectBill: selectBill}, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ResultList);
