@@ -20,10 +20,6 @@ class ResultList extends Component{
     this.props.selectBill(bill);
   }
 
-  componentDidMount(){
-    this.props.searchBill();
-  }
-
   renderResults(){
     let resultList = _.map(_.toArray(this.props.list), (bill) =>{
       if(bill.bill_number){

@@ -15,7 +15,7 @@ export function selectBill(bill){
 }
 export function searchBill(query){
   return function (dispatch){
-    axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=search&state=CO&query=animal`)
+    axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=search&state=CO&query=${query}`)
     .then(response =>{
       console.log("sucess",response.data);
       dispatch( {

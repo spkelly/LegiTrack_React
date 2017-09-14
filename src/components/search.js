@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { searchBill} from '../actions/index';
 
 class Search extends Component{
 
@@ -44,6 +46,7 @@ class Search extends Component{
 
     if( this.validateInput()){
         console.log('Valid', this);
+        this.props.searchBill(this.state.inputValue)
         this.props.history.push('/results');
     }
   }
@@ -73,4 +76,8 @@ class Search extends Component{
   }
 }
 
-export default withRouter(Search);
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({searchBill}, dispatch);
+}
+export default withRouter(connect(null,mapDispatchToProps)(Search));
