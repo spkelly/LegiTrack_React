@@ -1,5 +1,4 @@
-/* eslint-disable */
-export default function(state=null,action){
+export default function(state = null,action){
   switch(action.type){
   case 'BILL_SEARCH_SUCCESS':
     return action.payload

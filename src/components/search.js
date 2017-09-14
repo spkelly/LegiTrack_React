@@ -41,10 +41,10 @@ class Search extends Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.validateInput();
-    if(this.state.isValid){
-        console.log('Valid', this);
 
+    if( this.validateInput()){
+        console.log('Valid', this);
+        this.props.history.push('/results');
     }
   }
 
@@ -52,10 +52,11 @@ class Search extends Component{
     console.log("hello", this.state.inputValue.length);
     if(this.state.inputValue.length === 0){
       this.setState({isValid:false});
+      return false
     }
     else{
-      this.setState({isValid:true})
-      this.props.history.push('/results')
+      this.setState({isValid:true});
+      return true
     }
   }
 
