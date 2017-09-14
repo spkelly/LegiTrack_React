@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 
 
 class Search extends Component{
@@ -42,16 +43,19 @@ class Search extends Component{
     e.preventDefault();
     this.validateInput();
     if(this.state.isValid){
-        console.log('Valid');
+        console.log('Valid', this);
+
     }
   }
 
   validateInput(){
+    console.log("hello", this.state.inputValue.length);
     if(this.state.inputValue.length === 0){
-      this.setState({isValid: false});
+      this.setState({isValid:false});
     }
     else{
       this.setState({isValid:true})
+      this.props.history.push('/results')
     }
   }
 
@@ -59,24 +63,13 @@ class Search extends Component{
     return (
       <div className="search-component">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <div className="row">
-            <div className="col-lg-5 col-sm-12">
               <input type="text" value={this.state.inputValue}onChange={this.changeValue.bind(this)}className="form-control search-bar" />
-            </div>
-            <div className="col-lg-5 col-sm-12">
               <button type="submit" className="btn btn-primary form-control submit search-button" > Search </button>
-            </div>
-          </div>
         </form>
-        <div className="col-lg-5 col-sm-12">
-        {this.renderError()}
-        </div>
-        </div>
-
-
-
+          {this.renderError()}
+      </div>
     )
   }
 }
 
-export default Search
+export default withRouter(Search);

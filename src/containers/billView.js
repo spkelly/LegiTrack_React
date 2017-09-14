@@ -5,6 +5,7 @@ class BillView extends Component {
 
   renderBill(bill){
     if(bill){
+
       return(
         <div>
           <p>Title: {bill.title}</p>
@@ -14,7 +15,9 @@ class BillView extends Component {
           <p>Last Action Date: {bill.last_action_date}</p>
           <p>Research URL: {bill.research_url}</p>
           <p>Text URL: {bill.text_url}</p>
-          <p>State CO: {bill.state}</p>
+          <p>State: {bill.state}</p>
+          <p>Status: {bill.status}</p>
+          <p>progress: {bill.committee}</p>
         </div>
       )
     }

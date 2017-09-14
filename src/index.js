@@ -10,10 +10,11 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
+import thunk from 'redux-thunk';
 
 let history = createHistory();
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={history}>

@@ -1,10 +1,27 @@
 import axios from 'axios';
 export function selectBill(bill){
-  axios.get('https://api.legiscan.com/?key=6a2d12a9259d0c661bf3add8d58cd236&op=getBill&id=1021714', (data)=>{
-    console.log(data);
-  })
-  return {
-    type:'BILL_SELECTED',
-    payload: bill
+  console.log(bill);
+  return function (dispatch){
+    axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=getBill&id=${bill.bill_id}`)
+      .then(response =>{
+        console.log(response.data);
+        dispatch( {
+          type:'BILL_SELECTED',
+          payload: response.data.bill
+        })
+      })
+
+  }
+}
+export function searchBill(query){
+  return function (dispatch){
+    axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=search&state=CO&query=animal`)
+    .then(response =>{
+      console.log("sucess",response.data);
+      dispatch( {
+        type:'BILL_SEARCH_SUCCESS',
+        payload: response.data.searchresult
+      })
+    })
   }
 }

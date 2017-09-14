@@ -155,7 +155,12 @@ hr{
 /* Search Results*/
 
 .results-main{
-  min-height: 964px;
+  min-height:964px;
+}
+
+.result-container{
+  max-height: 900px;
+  overflow-y: scroll;
 }
 
 .list-item-title{
@@ -174,12 +179,42 @@ hr{
   padding-bottom: 26px;
   border: 0;
   font-family: 'Open Sans', sans-serif;
+  border-left: 2px solid rgba(0, 0, 0,0);
+}
+
+.bill-list-item:hover{
+  border-left: 2px solid rgb(60, 79, 88);
 }
 .search-col{
   padding: 0px;
 }
 .search-panel{
-  height:50px;
   border: black solid 1px;
-  padding: 0px;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.search-panel .search-component .search-bar{
+  width: 75%;
+}
+.search-panel .search-component .search-button{
+  margin-left: 10px;
+}
+
+.search-panel .search-component {
+  margin-top: 20px;
+}
+.advanced-search-opt  {
+  margin-top: 20px;
+}
+.advanced-search-opt p{
+  margin: 2px;
+  display: inline-block;
+}
+
+.advanced-search-opt li{
+  list-style: none;
+}
+.advanced-search-opt ul{
+  padding-left:10px;
 }
