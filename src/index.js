@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import Results from './components/Results';
+import BillView from './containers/billView';
  // eslint-disable-next-line
 import {Router, Route, IndexRoute} from 'react-router';
 import {Provider} from 'react-redux';
@@ -21,6 +22,7 @@ ReactDOM.render(
       <div>
         <Route exact path="/" component={App} />
         <Route path="/results" component={Results} />
+        <Route path="/bill/:id" component={BillView} />
       </div>
     </Router>
   </Provider>
