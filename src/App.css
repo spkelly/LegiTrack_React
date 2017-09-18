@@ -161,6 +161,7 @@ hr{
 #bill-main{
   height: 964px;
   padding-left: 12px;
+  overflow-y: scroll;
 }
 #no-results{
   width: 100%;
@@ -183,6 +184,10 @@ hr{
 }
 .bill-info-lable{
   margin-top: 20px;
+}
+
+.vote-btn{
+  padding: 2px;
 }
 iframe{
   height: 966px;
