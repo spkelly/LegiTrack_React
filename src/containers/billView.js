@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ProgressBar from '../components/ProgressBar';
 import SponsorCard from '../components/SponsorCard';
-
+import VoteView from '../components/voteView';
 import Navigation from '../components/navbar';
 import Footer from '../components/footer';
 import {getBillText, selectBill} from '../actions/index';
@@ -65,7 +65,7 @@ class BillView extends Component {
           </div>
           <h5 className="bill-info-lable">Votes</h5>
           <hr/>
-          <div className="vote-container"> coming soon</div>
+          <VoteView votes={bill.votes} />
 
           <h5>Texts</h5>
           <hr />
