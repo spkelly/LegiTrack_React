@@ -7,6 +7,7 @@ import ResultListItem from '../components/resultListItem';
 import SearchPanel from '../components/searchPanel';
 import {selectBill, searchBill} from '../actions/index';
 import {bindActionCreators} from 'redux';
+import { withRouter } from 'react-router';
 
 class ResultList extends Component{
   constructor(props){
@@ -16,11 +17,16 @@ class ResultList extends Component{
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(bill){
-    console.log("hello")
-    this.props.selectBill(bill);
+    this.props.selectBill(bill.bill_id);
+    this.props.history.push(`/bill/${bill.bill_id}`)
   }
 
   renderResults(){
+    if(!this.props.list){
+      return(
+        <div id="no-results">Please Search for a Bill</div>
+      )
+    }
     let resultList = _.map(_.toArray(this.props.list), (bill) =>{
       if(bill.bill_number){
         return (
@@ -34,7 +40,6 @@ class ResultList extends Component{
     return resultList;
   }
   render(){
-    console.log('this.props: ', this.props)
     return (
       <div className="search-main">
         <div className="row">
@@ -46,7 +51,6 @@ class ResultList extends Component{
             <div className="list-group result-container">
               {this.renderResults()}
             </div>
-            <BillView />
           </div>
 
         </div>
@@ -66,4 +70,4 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
   return bindActionCreators({selectBill: selectBill, searchBill: searchBill}, dispatch)
 }
-export default connect(mapStateToProps, mapDispatchToProps)(ResultList);
+export default  withRouter(connect(mapStateToProps, mapDispatchToProps)(ResultList));
