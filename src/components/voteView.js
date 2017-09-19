@@ -5,7 +5,7 @@ class VoteView extends Component{
   constructor(props){
     super(props);
 
-    this.state = {activeVote:props.votes[0]}
+    this.state = {activeVote:props.votes[props.votes.length -1]}
 
     this.renderVoteList = this.renderVoteList.bind(this);
     this.renderActiveVoteChart = this.renderActiveVoteChart.bind(this);
@@ -39,17 +39,15 @@ class VoteView extends Component{
       }],
       labels:['Yay: ' +this.state.activeVote.yea,
         'Nay: '+this.state.activeVote.nay,
-        'No Vote: '+this.state.activeVote.nv, 'Pass']
+        'No Vote: '+this.state.activeVote.nv,
+        'Pass: '+this.state.activeVote.passed]
     };
 
     return(
       <div className="active-vote-chart">
-        <h6 className="chart-label">{this.state.activeVote.desc}</h6>
+
         <Pie data={dataSet} />
-        <p>Yay: {this.state.activeVote.yea}</p>
-        <p>Nay: {this.state.activeVote.nay}</p>
-        <p>No Vote:  {this.state.activeVote.nv}</p>
-        <p>Pass:  {this.state.activeVote.passed}</p>
+        <h6 className="chart-label text-center">{this.state.activeVote.desc}</h6>
       </div>
     )
   }
