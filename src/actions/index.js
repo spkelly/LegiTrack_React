@@ -1,24 +1,21 @@
 import axios from 'axios';
 export function selectBill(billId){
-  console.log(billId);
   return function (dispatch){
     return axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=getBill&id=${billId}`)
-      .then(response =>{
-        console.log(response.data);
-        dispatch( {
-          type:'BILL_SELECTED',
-          payload: response.data.bill
-        })
+    .then(response =>{
+      dispatch( {
+        type:'BILL_SELECTED',
+        payload: response.data.bill
       })
-
+    })
   }
 }
+
+//graps bill text from the legiscan api and sends action to reducers
 export function getBillText (docId){
-  console.log("the docId in action handler",docId);
   return function (dispatch){
     return axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=getBillText&id=${docId}`)
     .then(response =>{
-      console.log('response for bill text', response);
       dispatch( {
         type:'GET_DOC',
         payload: response
