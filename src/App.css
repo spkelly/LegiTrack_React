@@ -1,3 +1,9 @@
+@keyframes example {
+    0%   {font-size: 18px;}
+    50%  {font-size: 24px;}
+    100% {font-size: 18px;}
+}
+
 *{
   font-family: 'Oswald';
 }
@@ -17,6 +23,14 @@ embed{
   margin-bottom: 0px;
 }
 
+#loading-icon{
+
+  text-align: center;
+  margin-top: 25%;
+  animation: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 .jb-title{
   color: white;
     text-shadow: 2px 2px rgba(0,0,0,.75);
@@ -48,6 +62,9 @@ iframe{
   color: white;
 }
 
+li{
+  list-style: none;
+}
 .jb-overlay{
   padding-top: 64px;
   padding-bottom: 32px;
@@ -57,16 +74,30 @@ iframe{
   width: 100%;
   background-color: rgba(176,197,207,0.3);
 }
-
+.status-container p{
+  display: inline;
+  margin-left: 12px;
+}
 .sponsor-info{
   font-weight: 200;
   padding-top: 18px;
   padding-left: 0;
 }
+.vote-btn{
+  border: 1px solid black;
+  margin: 2px;
+  background-color: rgba(0,0,0,0);
+  padding: 6px!important;
+}
+.vote-view{
+  width: 90%;
+  margin: 0 auto;
+}
 .promo{
   padding-top: 50px;
   padding-bottom: 40px;
-  min-height:352px;
+  height: 424px;
+  min-height:354px;
   /*background-color: #b0c5cf;*/
 
 }
@@ -205,6 +236,7 @@ hr{
 
 #bill-view{
   background-color: #f1f1f1;
+  height: 100%;
 }
 #no-results{
   width: 100%;

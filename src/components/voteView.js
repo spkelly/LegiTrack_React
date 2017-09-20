@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {Pie} from 'react-chartjs-2';
 import pattern from 'patternomaly'
+
+
 class VoteView extends Component{
+
   constructor(props){
     super(props);
 
@@ -32,7 +35,7 @@ class VoteView extends Component{
           this.state.activeVote.nv,
           this.state.activeVote.passed],
         backgroundColor: [
-              '#c3f7c3',
+              '#88e088',
               '#ff7c75',
               '#ffce56',
               '#d6d8d6']
@@ -45,21 +48,21 @@ class VoteView extends Component{
 
     return(
       <div className="active-vote-chart">
-
         <Pie data={dataSet} />
         <h6 className="chart-label text-center">{this.state.activeVote.desc}</h6>
       </div>
     )
   }
+
   render(){
     return (
       <div className="vote-view">
         {this.renderVoteList()}
-
         {this.renderActiveVoteChart()}
       </div>
     )
   }
+
 }
 
 export default VoteView
