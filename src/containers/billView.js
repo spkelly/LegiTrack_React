@@ -83,8 +83,6 @@ class BillView extends Component {
             <p>Status: {getStatus(bill.status)}</p>
             <p>Last Update: {bill.status_date}</p>
           </section>
-
-
           <h5>Description</h5>
           <hr/>
           <p className="bill-desc">{bill.description}</p>
@@ -98,7 +96,6 @@ class BillView extends Component {
           <h5 className="bill-info-lable">Votes</h5>
           <hr/>
           <VoteView votes={bill.votes} />
-
           <h5 >Texts</h5>
           <hr />
           <div>
