@@ -4,6 +4,8 @@
     100% {font-size: 18px;}
 }
 
+
+
 *{
   font-family: 'Oswald';
 }
@@ -107,12 +109,15 @@ li{
 .footer{
 
 }
-
+.search-container{
+  width: 80%;
+}
 .search-component{
   padding-top: 10px;
 }
 .search-bar{
   background-color: rgba(255,255,255,0.5);
+  width: 60%;
   display: inline-block;
   -webkit-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
@@ -133,6 +138,7 @@ li{
   color: black;
   background-color: #b0bec5;
   width: 80px;
+  margin-left: 20px;
   display: inline-block;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.25);
