@@ -14,20 +14,22 @@ import { withRouter } from 'react-router';
 function getStatus(status){
   switch(status){
     case 1:
-      return "Introduced"
+      return {text:"Introduced",progress:'25', complete:false}
     case 2:
-      return "Engrossed"
+      return {text:"Engrossed", progress:'50', complete:false}
     case 3:
-      return "Enrolled"
+      return {text:"Enrolled", progress:'75', complete:false}
     case 4:
-      return "Passed"
+      return {text:"Passed", progress:'100', complete:false}
     case 5:
     case 6:
-      return "Vetoed"
+      return {text:"Vetoed", prgress: '100', }
     default:
       return "error " + status
   }
 }
+
+
 
 
 class BillView extends Component {
@@ -73,14 +75,15 @@ class BillView extends Component {
 
   renderBill(bill){
     if(bill){
+      let status = getStatus(bill.status);
       let texts = this.props.activeBill.texts;
       return(
         <div id="bill-main">
           <p>{bill.bill_number}</p>
           <h1>{bill.title}</h1>
           <section className="status-container">
-            <ProgressBar progress="75"/>
-            <p>Status: {getStatus(bill.status)}</p>
+            <ProgressBar progress={status.progress}/>
+            <p>Status: {status.text}</p>
             <p>Last Update: {bill.status_date}</p>
           </section>
           <h5>Description</h5>
@@ -118,7 +121,6 @@ class BillView extends Component {
     if(this.props.billText){
       console.log("rendering bill text", this.props.billText.data.text.doc_id);
       let uriPrefix ='data:' + this.props.billText.data.text.mime + ';base64,';
-
       let uri = uriPrefix + this.props.billText.data.text.doc;
       return(<iframe src={uri} style={{height:'100%'}}data-id={this.props.billText.data.text.doc_id}/> )
     }
