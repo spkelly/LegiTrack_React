@@ -159,11 +159,11 @@ li{
 }
 
 .search-button:focus{
-  background-color: rgba(176,190,197,1);
+  background-color: rgba(20, 51, 16,1);
 }
 
 .search-button:hover{
-  background-color: rgba(176,190,197,1);
+  background-color: rgba(20, 51, 16,1);
 }
 
 .input-error{
@@ -370,14 +370,18 @@ span img{
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .search-bar{
-    width:70%;
+    width:75%;
   }
   .search-button{
-    width:30%;
+    width:25%;
   }
 
   .search-container{
     width:100%;
+  }
+
+  .promo{
+    padding-top: 10px;
   }
 /* Styles */
 }
