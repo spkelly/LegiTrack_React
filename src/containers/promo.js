@@ -13,19 +13,21 @@ class Promo extends Component{
     return (
       <div className="promo">
         <div className="container">
-        <h4>Recently Viewed</h4>
           <div className="row">
-            <div className="col-md-3 col-sm-12 ">
-              <BillCard bill={bill} progress="25" cardNum="158329"></BillCard>
+            <div className="col-md-4 col-sm-12 text-center">
+              <h3 class="flavor-title center">Discover</h3>
+              <hr />
+              <h5 class="center">Search any active Colorado legislation!</h5>
             </div>
-            <div className="col-md-3 col-sm-12">
-              <BillCard bill={bill} progress="50" cardNum="35823"></BillCard>
+            <div className="col-md-4 col-sm-12 text-center">
+              <h3 class="flavor-title center">Track</h3>
+              <hr />
+              <h5 class="center">View upcoming Events, votes, hearings and more!</h5>
             </div>
-            <div className="col-md-3 col-sm-12 ">
-              <BillCard bill={bill} progress="75" cardNum="8421"></BillCard>
-            </div>
-            <div className="col-md-3 col-sm-12 ">
-              <BillCard bill={bill} progress="100" cardNum="2284"></BillCard>
+            <div className="col-md-4 col-sm-12 text-center">
+              <h3 class="flavor-title center">Research</h3>
+              <hr />
+              <h5 class="center">Discover bill sponsors, currents statuses and complete bill texts</h5>
             </div>
           </div>
         </div>
