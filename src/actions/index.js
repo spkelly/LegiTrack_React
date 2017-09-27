@@ -1,4 +1,6 @@
 import axios from 'axios';
+
+
 export function selectBill(billId){
   return function (dispatch){
     return axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=getBill&id=${billId}`)
@@ -11,7 +13,7 @@ export function selectBill(billId){
   }
 }
 
-//graps bill text from the legiscan api and sends action to reducers
+
 export function getBillText (docId){
   return function (dispatch){
     return axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=getBillText&id=${docId}`)
@@ -23,6 +25,8 @@ export function getBillText (docId){
     })
   }
 }
+
+
 export function searchBill(query){
   return function (dispatch){
     axios.get(`https://api.legiscan.com/?key=${process.env.REACT_APP_LEGISCAN_KEY}&op=search&state=CO&query=${query}`)

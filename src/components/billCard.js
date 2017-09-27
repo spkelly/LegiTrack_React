@@ -10,7 +10,6 @@ class BillCard extends Component{
         <a>
           <h5 className="bc-title">HB17_{this.props.cardNum}</h5>
           <hr></hr>
-
           <div className="container">
             <p className="bc-status">Status: </p>
             <ProgressBar progress={this.props.progress} />
