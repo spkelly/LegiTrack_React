@@ -110,14 +110,15 @@ li{
 
 }
 .search-container{
-  width: 80%;
+  width: 70%;
 }
 .search-component{
   padding-top: 10px;
 }
 .search-bar{
+  border-radius: 0px;
   background-color: rgba(255,255,255,0.5);
-  width: 60%;
+  width: 80%;
   display: inline-block;
   -webkit-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
@@ -134,15 +135,17 @@ li{
 }
 
 .search-button{
+  padding-top:9px;
   border-color: rgba(176,190,197,0.5);
+  border-radius: 0px;
   color: black;
   background-color: #b0bec5;
-  width: 80px;
-  margin-left: 20px;
+  width: 20%;
   display: inline-block;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.25);
   box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.25);
+
 }
 
 .search-button:focus{
@@ -343,6 +346,7 @@ span img{
   padding: 0;
 }
 
+
 .sponsor-card{
   background-color: #bfd7ff;
   padding-top: 10px;
@@ -352,4 +356,18 @@ span img{
 .sponsor-name{
   display: inline;
   margin-left: 10px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .search-bar{
+    width:70%;
+  }
+  .search-button{
+    width:30%;
+  }
+
+  .search-container{
+    width:100%;
+  }
+/* Styles */
 }
