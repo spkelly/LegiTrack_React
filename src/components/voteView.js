@@ -16,7 +16,6 @@ class VoteView extends Component{
 
   handleClick(event,vote){
     event.preventDefault;
-    console.log("vote button clicked", vote);
     this.setState({activeVote:vote})
   }
 

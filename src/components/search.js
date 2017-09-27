@@ -45,14 +45,12 @@ class Search extends Component{
     e.preventDefault();
 
     if( this.validateInput()){
-        console.log('Valid', this);
         this.props.searchBill(this.state.inputValue)
         this.props.history.push('/results');
     }
   }
 
   validateInput(){
-    console.log("hello", this.state.inputValue.length);
     if(this.state.inputValue.length === 0){
       this.setState({isValid:false});
       return false

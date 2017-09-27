@@ -52,7 +52,6 @@ class BillView extends Component {
     })
     .then(() =>{
       let loading = document.getElementById("loading-icon")
-      console.log(loading);
       loading.parentNode.removeChild(loading);
     })
   }
@@ -69,7 +68,6 @@ class BillView extends Component {
   }
 
   handleTextChange(textId){
-    console.log(textId);
     this.props.getBillText(textId)
   }
 
@@ -113,20 +111,17 @@ class BillView extends Component {
 
   renderSponsors(sponsors){
     return sponsors.map((sponsor) =>{
-      console.log(sponsor)
       return <div key={sponsor.people_id} className="col-md-6 col-6"><SponsorCard sponsor={sponsor} /></div>
     })
   }
   renderBillText(){
     if(this.props.billText){
-      console.log("rendering bill text", this.props.billText.data.text.doc_id);
       let uriPrefix ='data:' + this.props.billText.data.text.mime + ';base64,';
       let uri = uriPrefix + this.props.billText.data.text.doc;
       return(<iframe src={uri} style={{height:'100%'}}data-id={this.props.billText.data.text.doc_id}/> )
     }
   }
   render(){
-    console.log(this.props);
     return(
       <div id="bill-view">
         <Navigation />

@@ -11,7 +11,6 @@ class Results extends Component{
     super(props);
   }
   render(){
-    console.log(this.state)
     return (
       <div className="search-results">
         <Navigation />
