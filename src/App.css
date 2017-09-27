@@ -7,7 +7,7 @@
 
 
 *{
-  font-family: 'Oswald';
+  font-family: 'Open Sans';
 }
 embed{
   height:980px!important;
@@ -45,7 +45,7 @@ embed{
 }
 .navbar{
   color: white;
-  background-color: #485563!important;
+  background-color: #143310!important;
 }
 iframe{
   height: 100%;
@@ -74,7 +74,7 @@ li{
   padding-right: 16px;
   height: 100%;
   width: 100%;
-  background-color: rgba(176,197,207,0.3);
+  background-color: rgba(20, 51, 16, 0.2);
 }
 .status-container p{
   display: inline;
@@ -96,14 +96,24 @@ li{
   margin: 0 auto;
 }
 .promo{
-  padding-top: 70px;
-  padding-bottom: 70px;
-  min-height: 424px;
+  font-family: 'Open Sans', sans-serif;
+  color: #341809;
+  background-color: #f8fff7!important;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  min-height: 400px;
   /*background-color: #b0c5cf;*/
 }
 
-.promo h4{
-  padding-bottom: 20px;
+.promo h3{
+  padding-top: 50px;
+  font-size: 36px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.promo h5{
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer{
@@ -139,7 +149,7 @@ li{
   border-color: rgba(176,190,197,0.5);
   border-radius: 0px;
   color: black;
-  background-color: #b0bec5;
+  background-color: #f8fff7;
   width: 20%;
   display: inline-block;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.25);
