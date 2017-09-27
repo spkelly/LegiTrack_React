@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import BillView from './billView';
 import ResultListItem from '../components/resultListItem';
-import SearchPanel from '../components/searchPanel';
+import Search from '../components/search';
 import {selectBill, searchBill} from '../actions/index';
 import {bindActionCreators} from 'redux';
 import { withRouter } from 'react-router';
@@ -42,19 +42,12 @@ class ResultList extends Component{
   render(){
     return (
       <div className="search-main">
-        <div className="row">
-          <div className="col-md-3 search-col">
-            <SearchPanel/>
-          </div>
-          <div className="col-md-9">
-            <hr className="text-center results-title"></hr>
+        <div className="container">
+          <Search />
             <div className="list-group result-container">
               {this.renderResults()}
             </div>
-          </div>
-
         </div>
-
       </div>
     )
   }
