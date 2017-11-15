@@ -84,10 +84,12 @@ class BillView extends Component {
             <p>Status: {status.text}</p>
             <p>Last Update: {bill.status_date}</p>
           </section>
+          <section className="description-sec">
           <h5>Description</h5>
           <hr/>
           <p className="bill-desc">{bill.description}</p>
-          <h5 className="bill-info-lable">Sponsors</h5>
+          </section>
+          <h5 className="bill-info-lable">Top Sponsors</h5>
           <hr/>
           <div className="container">
             <div className="row">
@@ -111,14 +113,15 @@ class BillView extends Component {
 
   renderSponsors(sponsors){
     return sponsors.map((sponsor) =>{
-      return <div key={sponsor.people_id} className="col-md-6 col-6"><SponsorCard sponsor={sponsor} /></div>
+      return <div key={sponsor.people_id} className="col sponsor-col"><SponsorCard sponsor={sponsor} /></div>
     })
   }
   renderBillText(){
     if(this.props.billText){
       let uriPrefix ='data:' + this.props.billText.data.text.mime + ';base64,';
       let uri = uriPrefix + this.props.billText.data.text.doc;
-      return(<iframe src={uri} style={{height:'100%'}}data-id={this.props.billText.data.text.doc_id}/> )
+      // return(<iframe src={uri} style={{height:'100%'}}data-id={this.props.billText.data.text.doc_id}/> )
+      return( <object data={uri} style={{height:'100%'}}data-id={this.props.billText.data.text.doc_id}/> )
     }
   }
   render(){

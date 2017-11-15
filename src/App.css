@@ -94,10 +94,11 @@ li{
   display: inline;
   margin-left: 12px;
 }
-.sponsor-info{
-  font-weight: 200;
-  padding-top: 18px;
-  padding-left: 0;
+
+
+.sponsor-pic{
+  display: block;
+  margin: auto;
 }
 .vote-btn{
   border: 1px solid black;
@@ -295,7 +296,7 @@ hr{
 .vote-btn{
   padding: 2px;
 }
-iframe{
+object{
   height: 966px;
   width: 100%;
 }
@@ -370,16 +371,40 @@ span img{
   padding: 0;
 }
 
+.description-sec{
+  margin-top: 24px;
+}
 
 .sponsor-card{
   background-color: #bfd7ff;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 6px;
   border: 1px solid #bfd9ff;
+  min-height: 122px;
+}
+
+.dem{
+  background-color:rgb(191, 217, 255)!important;
+}
+
+.rep{
+  background-color:rgb(250, 141, 141)!important;
+  border-color: rgb(250, 141, 141)!important;
 }
 .sponsor-name{
-  display: inline;
-  margin-left: 10px;
+  display: inline-block;
+  margin-bottom:0;
+}
+
+.sponsor-info{
+  width: auto;
+  font-weight: 200;
+  padding: 0 2px;
+
+}
+
+.sponsor-col{
+  padding: 2px;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
